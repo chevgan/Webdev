@@ -107,3 +107,60 @@ h2.title{
     margin: 0 auto;
     margin-top: 13px;
 }
+
+/* Второй экран------------------------- */
+
+/* Второй экран */
+.waiting{
+    height: 607px;
+    background: #EFEFEF;
+    padding: 85px 0 75px 0;
+}
+/* Первый заголовок */
+.waiting .waiting_header{
+    color: #252525;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+/* Разделитель */
+.waiting .waiting_divider{
+    background: #F9BF3B;
+    width: 217px;
+    height: 4px;
+    margin: 18px auto;
+}
+/* Второй заголовок */
+.waiting .waiting_subheader{
+    color: #4A4A4A;
+    margin-top: 17px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 23px;
+    text-align: center;
+}
+
+.waiting .waiting_wrapper{
+    margin-top: 45px;
+}
+/* Стиль блоков */
+.waiting .waiting_wrapper .waiting_item{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    width: 339px;
+    text-align: center;
+}
+.waiting .waiting_wrapper .waiting_item .waiting_img{
+    width: 100%;
+}
+.waiting .waiting_wrapper .waiting_item .waiting_descr{
+    color: #4A4A4A;
+    margin-top: 26px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+}
