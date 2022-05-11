@@ -1,0 +1,621 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #E5E5E5;
+    font-family: Reith-Sans;
+    width: 1600px;
+    margin: 0px auto;
+    position: relative;
+}
+ol, ul{
+    list-style: none;
+}
+/*Стилизация скролла*/
+body::-webkit-scrollbar{
+    width: 7px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #C4C4C4;
+}
+/*Все ссылки становятся чёрными и убирается нижнее подчёркивание*/
+a{
+    text-decoration: none;
+    color: black;
+}
+/*Для заголовков блока "самое популярное"*/
+h3{
+    color: #b80000;
+    font-size: 40px;
+    margin-right: 30px;
+}
+/*Все svg изображение будут иметь размер 12x12*/
+svg{
+    width: 12px;
+    margin-left: 12px;
+    margin-right: 7px;
+}
+/*Отдельный селектор*/
+header, .logo, .first_logo, .second_logo, .lang__search, .languages, .navigation, .place_for_logo, .in_moved, .course, .info, .currency, .headLine, .flipping_news, .arrows, .arrows svg, .arrow, .news,
+.rest_photos, .fixed_blocks, .offer, .faq, .ticker, .offer_to_see, .video_info_container, .video_info, .after_videos, .most_popular, .main_news, .last_or_main__button, .news_button, .photo_news, .sections,
+.footer_top, .data, .site_button, .footer_bottom, .rest_links{
+    display: flex;
+}
+/*box-sizing:border-box также отнёс в один селектор*/
+.mag_glass, .burger, #moved_block, .headLine, .articula, .video_info, .most_popular, .samoe_popularnoe, .sections, footer{
+    box-sizing: border-box;
+}
+/*header состоит из logo, search и lang__seacrh*/
+header{
+    width: 100%;
+    height: 60px;
+    margin: 0px auto;
+    justify-content: center;
+    align-items: flex-end;
+}
+.logo{
+    background-color: #b80000;
+    width: 640px;
+    height: 60px;
+    align-items: center;
+}
+/*Блок с двумя логотипами*/
+.first_logo, .second_logo{
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+}
+.first_logo{
+    border-right: solid 4px white;
+}
+/*Форма поиска*/
+.search{
+    background-color: #f0e8e2;
+    width: 800px;
+    height: 60px;
+}
+.search::placeholder{
+    padding: 20px;
+}
+/*обнуление обводки при фокусе*/
+.search:focus{
+    outline: 0;
+    outline-offset: 0;
+}
+/*Блок со значком лупы и сменой языков*/
+.lang__search{
+    background-color: #262e2e;
+    width: 170px;
+    height: 60px;
+    fill: white;
+    justify-content: space-around;
+    align-items: center;
+}
+/*Следующие 2 класса это стилизация значка*/
+.mag_glass{
+    padding-right: 15px;
+}
+.lang__search svg{
+    width: 25px;
+}
+.languages{
+    color: #fff;
+    font-size: 18px;
+    margin: 13px 0px;
+}
+.language{
+    padding: 0px 15px;
+}
+/*Создание вертикальной полосы*/
+.kz{
+    border-right: white 1px solid;
+}
+.navigation{
+    margin-top: 16px;
+    height: 48px;
+}
+/*Навигационное меню*/
+nav{
+    width: 100%;
+    background-color: #b80000;
+    height: 48px;
+    position: relative;
+}
+.navigation ul{
+    margin-left: 150px;
+}
+/*Отдельные блоки навигации*/
+.list_block{
+    display: inline-block;
+    margin: 0px 10px;
+    color: white;
+    height: 31px;
+}
+/*Создание белой полосы снизу при наводке*/
+.list_block:hover{
+    border-bottom: solid 3px white;
+    cursor: pointer;
+}
+/*Меню-бургер*/
+.burger{
+    background-color: #C4C4C4;
+    width: 62px;
+    height: 48px;
+    cursor: pointer;
+}
+/*Стилизация "бургера"*/
+.burger span{
+    width: 40px;
+    height: 5px;
+    background-color: #fff;
+    display: block;
+    margin-left: 11px;
+    margin-right: 11px;
+    margin-top: 8px;
+}
+/*Блок, который выдвигается при нажатии на "бургер"*/
+#moved_block{
+    background-color: #262e2e;
+    height: 1000px;
+    width: 400px;
+    position: fixed;
+    z-index: 7;
+    transform: translateY(48px); 
+    padding: 0px 30px;
+    left: -400px;
+    transition-duration: 0.5s;
+}
+/*Класс активен только если сработала функция move(), которая вызывается при клике на бургер*/
+#moved_block.active{
+    left: 0px;
+}
+/*Логотип и крестик*/
+.place_for_logo{
+    color: #fff;
+    font-size: 26px;
+    justify-content: space-between;
+}
+/*Крестик*/
+.close{
+    width: 25px;
+    height: 25px;
+    margin-top: 25px;
+    fill: #fff;
+}
+.close:hover{
+    cursor: pointer;
+}
+/*Блок с куррсом валют и списком погоды*/
+.in_moved{
+    fill: #fff;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+}
+/*Строка поиска в выдвигающемся блоке*/
+.in_moved_input{
+    width: 100%;
+    background-color: #444a4a;
+    height: 40px;
+}
+/*Список погоды*/
+.weather_list{
+    display: inline;
+}
+/*Список с заглушкой "новости"*/
+.nav_list{
+    color: #fff;
+    line-height: 12px;
+    border-bottom: solid gray 1px;
+}
+/*Список с заглушкой "о редакции"*/
+.nav_list2{
+    color: gray;
+    line-height: 10px;
+}
+/*Основной блок, в котором находится большая часть контента*/
+main{
+    width: 1600px;
+    background-color: #E5E5E5;
+    margin: 10px auto 0px auto;
+}
+/*Блок с тегами, валютой и погодой*/
+.info{
+    background-color: white;
+    height: 40px;
+    align-items: center;
+    position: relative;
+}
+/*Список тегов*/
+.info li{
+    display: inline;
+    margin: 5px 10px;
+    font-size: 20px;
+}
+/*Валюта*/
+.currency{
+    height: 54px;
+    margin-left: 50px;
+    align-items: flex-end;
+}
+/*Погода*/
+.weather{
+    position: absolute;
+    right: 10px;
+}
+.weath_el{
+    display: inline;
+}
+/*Строка ПОСЛЕДНИЕ НОВОСТИ*/
+.headLine{
+    background-color: #fff;
+    margin-top: 20px;
+    height: 40px;
+    padding: 5px 0px 5px 20px;
+    align-items: center;
+}
+/*Строка ТЕСТОВАЯ НОВОСТЬ и стрелки листания*/
+.flipping_news{
+    width: 80%;
+    margin-left: 40px;
+    justify-content: space-between;
+}
+/*Блок со стрелками */
+.arrows{
+    justify-content: center;
+    align-items: center;
+}
+/*Изображения стрелок*/
+.arrows svg{
+    fill: #f0e8e2;
+}
+/*Стилизация стрелок*/
+.arrow{
+    border: #f0e8e2 1px solid;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.arrow:hover{
+    cursor: pointer;
+}
+/*Выравнивание стрелок*/
+.left_arrow{
+    right: 230px;
+}
+.right_arrow{
+    left: 70px;
+}
+/*Основной блок с новостями*/
+.news{
+    margin-top: 20px;
+}
+/*Блок со статьями (со скроллом)*/
+.articules{
+    width: 500px;
+    background-color: white;
+    height: 600px;
+    overflow: auto;
+}
+/*Стилизация скролла*/
+.articules::-webkit-scrollbar{
+    width: 7px;
+}
+.articules::-webkit-scrollbar-thumb{
+    background-color: #b80000;
+    border-radius: 5px;
+}
+/*Каждая отдельная статья*/
+.articula{
+    width: 100%;
+    border-bottom: solid gray 1px;
+    padding: 10px 6px;
+}
+/*Дата*/
+.date{
+    font-size: 14px;
+    color: gray;
+    line-height: 0;
+}
+/*Блок с фото*/
+.photos{
+    width: 1100px;
+    height: 600px;
+}
+/*Первое фото стилизовано и выровнено отдельно*/
+.main_photo img{
+    width: 1098px;
+    height: 410px;
+}
+/*Остальные фото в один ряд*/
+.rest_photos{
+    justify-content: space-between;
+}
+.rest_photos img{
+    width: 224;
+    height: 180px;
+}
+/*Липкие блоки справа*/
+.fixed_blocks{
+    transform: rotate(270deg);
+    width: 660px;
+    height: 100px;
+    position: fixed;
+    left: 80%;
+    justify-content: space-between;
+    bottom: 45%;
+}
+/*Сами блоки*/
+.offer, .faq{
+    background-color: #C4C4C4;
+    width: 310px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+/*Бегущая строка*/
+.ticker{
+    width: 100%;
+    height: 60px;
+    background-color: #C4C4C4;
+    font-size: 24px;
+    align-items: center;
+}
+/*Блок с видео*/
+.videos{
+    margin-top: 10px;
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 60px;
+}
+/*Сами видео*/
+iframe{
+    margin: 0px 20px;
+}
+/*Блок watch it с двумя полосками над видео*/
+.offer_to_see{
+    justify-content: space-around;
+    align-items: center;
+}
+/*Watch it*/
+.offer_to_see h2{
+    margin-left: -10px;
+}
+/*Две полоски*/
+.decoration{
+    background-color: gray;
+    height: 3px;
+    width: 1380px;
+    margin-top: 5px;
+}/*Контейнер для блоков с информацией видео*/
+.video_info_container{
+    width: 100%;
+    position: absolute;
+    justify-content: space-around;
+    bottom: 0;
+    font-size: 24px;
+}
+/*Сами блоки с информацией о видео*/
+.video_info{
+    background-color: #E5E5E5;
+    width: 633px;
+    height: 100px;
+    z-index: 5;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 40px;
+}
+/*Кнопки проигрывания*/
+.video_info_container svg{
+    width: 25px;
+    height: 25px;
+    fill: #b80000;
+    margin-top: 10px;
+}
+/*Блок после блока с видео (самое популярное и рекламный блок)*/
+.after_videos{
+    margin-top: 50px;
+}
+/*Блок "самое популярное"*/
+.most_popular{
+    width: 1000px;
+    height: 500px;
+    background-color: #fff;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+/*Контейнер для контента блока*/
+.samoe_popularnoe{
+    padding: 10px;
+}
+/*Заголовок*/
+.most_popular h2{
+    margin-left: 14px;
+}
+/*Контент*/
+.numeruous_content{
+    width: 450px;
+    height: 60px;
+    margin: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+/*Блок рекламы*/
+.advertising{
+    background-color: #C4C4C4;
+    width: 600px;
+    height: 500px;
+    margin-left: 15px;
+}
+/*Следующий блок новостей*/
+.main_news{
+    background-color: #fff;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+/*Кнопка переключения следующие 3 класса - их стилизация*/
+.last_or_main__button{
+    width: 250px;
+    height: 50px;
+    background-color: #C4C4C4;
+    margin-top: 0px;
+    border-radius: 15px;
+    font-size: 16px;
+    justify-content: space-around;
+    align-items: center;
+}
+.news_button{
+    max-height: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.news_button:hover{
+    cursor: pointer;
+}
+/*Как и с фотографиями первый новостной блок оформлен отдельно*/
+.the_big_news{
+    width: 700px;
+    font-size: 30px;
+    padding: 20px;
+}
+/*Отступ следующих двух блоков*/
+.top-little{
+    margin-top: 80px;
+}
+/*Остальные блоки новостей*/
+.announcement{
+    width: 350px;
+    font-size: 20px;
+    margin: 10px;
+}
+/*Выравнивание и стилизация блока с фотографиями-новостями*/
+.photo_news{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.photo_news img{
+    height: 400px;
+    width: 250px;
+    margin: 10px 0px;
+}
+/*Блок с колонннами "Регионы-новости"*/
+.sections{
+    font-size: 20px;
+    width: 1600px;
+    justify-content: space-between;
+    background-color: #EBF0f3;
+    padding: 0px 10px;
+}
+/*Отступы между строками */
+.sections p{
+    line-height: 1px;
+}
+/*Подвал/футер*/
+footer{
+    background-color: #004c93;
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+}
+/*Отступ между параграфами футера*/
+footer p{
+    line-height: 10px;
+}
+/*Верхний блок футера (форма отправки)*/
+.footer_top{
+    width: 90%;
+    margin: 0px auto;
+    border-bottom: solid #e54d14 1px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+/*Сама форма отправки*/
+.footer_top input{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 400px;
+    height: 40px;
+    margin-left: 22px;
+}
+/*Кнопка справа от формы*/
+.orange_button{
+    width: 100px;
+    height: 44px;
+    background-color: #e54d14;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.contact_data{
+    width: 50%;
+    margin: 20px;
+}
+/*Кнокпа сайта*/
+.site_button{
+    margin-top: 20px;
+    background-color: #e54d14;
+    border-radius: 25px;
+    width: 300px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+/*Описание (справа)*/
+.description{
+    margin-top: 60px;
+    width: 50%;
+    justify-content: flex-end;
+}
+/*Стилизация ссылок снизу слева*/
+.links a{
+    color: #fff;
+    margin: 0px 20px;
+    text-decoration: underline;
+}
+/*Стилизация списка (тоже снизу слева)*/
+footer li{
+    display: inline;
+    margin: 0px 20px;
+}
+/*Самый нижни блок*/
+.footer_bottom{
+    width: 96%;
+    margin: 0px auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-top: white 3px solid;
+}
+/*Окрашивание в белый текст ссылок*/
+.footer_bottom a{
+    color: #fff;
+}
+/*Стилизация svg (соцсети)*/
+.footer_bottom svg{
+    fill: #fff;
+    width: 25px;
+    height: 25px;
+}
+/*Круг между двумя ссылками справа*/
+.circle{
+    background-color: #fff;
+    width: 5px;
+    height: 5px;
+    border-radius: 30px;
+    margin: 0px 5px;
+}
+/*Выравнивание svg соцсетей*/
+.rest_links{
+    align-items: center;
+    justify-content: space-between;
+}
