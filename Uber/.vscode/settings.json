@@ -1,0 +1,19 @@
+{
+    "indentRainbow.ignoreLinePatterns": [
+
+        "/[ \t]* [*]/g",
+        "/[ \t]+[/]{2}/g",       
+        
+    ],
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "~/../css/"
+        }
+    ],
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 2 versions"
+    ]
+}
